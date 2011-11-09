@@ -1,0 +1,9 @@
+This starter package zip was published on Mon Nov  7 07:00:38 UTC 2011.
+
+Last change on this starter package was:
+commit 225a025c8150471aeb3955f754a4a81e11beef24
+Date:   Fri Oct 21 13:57:16 2011 -0300
+
+    Added Hill support to map. square.hill? returns false if it is not a hill, else returns the owner number of the hill
+
+Check https://github.com/aichallenge/aichallenge/tree/epsilon/ants/dist/starter_bots/ruby for new versions.
