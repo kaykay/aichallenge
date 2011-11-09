@@ -1,5 +1,7 @@
 $:.unshift File.dirname($0)
-require 'ants.rb'
+#require all ruby files in current directory
+Dir.glob(/*.rb/).each {|f| require f }
+
 
 ai=AI.new
 
