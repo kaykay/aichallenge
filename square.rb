@@ -24,6 +24,10 @@ class Square
 	# Returns true if this square has an alive ant.
 	def ant?; @ant and @ant.alive?; end;
 	
+	def open?
+		land? and !ant?
+	end
+	
 	# Returns a square neighboring this one in given direction.
 	def neighbor direction
 		direction=direction.to_s.upcase.to_sym # canonical: :N, :E, :S, :W
