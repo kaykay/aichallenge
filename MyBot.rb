@@ -11,14 +11,6 @@ end
 
 ai.run do |ai|
   # your turn code here
-  
-  ai.my_ants.each do |ant|
-    # try to go north, if possible; otherwise try east, south, west.
-    [:N, :E, :S, :W].each do |dir|
-      if ant.square.neighbor(dir).land?
-        ant.order dir
-        break
-      end
-    end
-  end
+  walk = Walk.new(ai)
+  walk.walk
 end
