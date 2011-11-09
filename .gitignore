@@ -1,1 +1,3 @@
 tools/*.pyc
+tools/game_logs/*
+
