@@ -3,5 +3,5 @@
 	"python sample_bots/python/HunterBot.py" \
 	"python sample_bots/python/LeftyBot.py" \
 	"python sample_bots/python/HunterBot.py" \
-    "ruby ../MyBot.rb" |
+    "ruby ../ruby/MyBot.rb" |
 java -jar visualizer.jar
