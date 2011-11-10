@@ -1,6 +1,6 @@
 $:.unshift File.dirname($0)
 #require all ruby files in current directory
-Dir.glob("*.rb").each {|f| require f }
+Dir.glob("*.rb").each {|f| require f if !(f =~ /spec/)}
 
 $stderr.reopen("err.txt", "w")
 
@@ -14,5 +14,5 @@ ai.run do |ai|
 
   # your turn code here
   walk = Walk.new(ai)
-  walk.random_walk
+  walk.food_walk
 end

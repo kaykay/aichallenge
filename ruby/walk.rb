@@ -1,12 +1,28 @@
 class Walk
-  attr_reader :orders, :ai
+  attr_reader :orders, :ai, :targets
 
   def initialize(ai)
     @ai = ai
     @orders = {}
+    @targets = {}
   end
   def not_taken?(loc)
     !@orders.has_key?(loc)
+  end
+  
+
+  def move_location(ant_loc, dest)
+    dirs = ant_loc.direction(dest)
+    warn "directions : #{dirs}"
+    dirs.each do |dir|
+      if(move_direction(ant_loc, dir))
+        warn "Move direction [#{ant_loc.row}, #{ant_loc.col}], #{dir}"
+        targets[dest] = ant_loc
+        return true
+      else
+        false
+      end
+    end
   end
   
   def move_direction(ant_loc, dir)
@@ -24,6 +40,25 @@ class Walk
     @ai.my_ants.each do |ant|
       [:N, :E, :S, :W].each do |dir|
         break if move_direction(ant.square, dir)  
+      end
+    end
+  end
+
+  def food_walk
+    ant_dist = []
+    @ai.food_squares.each do |fs|
+      @ai.my_ants.each do |ant|
+        dist = ant.square.distance(fs)
+        ant_dist << [dist, ant.square, fs]
+      end
+      ant_dist.sort do |a, b|
+        a[0] <=> b[0]
+      end
+      ant_dist.each do |dist, ant_loc, food_loc|
+        if (!@targets.keys.include?(food_loc) && !@targets.values.include?(ant_loc))
+          move_location(ant_loc, food_loc)
+        #  warn "Move location, #{ant_loc}, #{food_loc}"
+        end
       end
     end
   end

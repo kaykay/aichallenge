@@ -8,7 +8,7 @@ class AI
   attr_accessor :loadtime, :turntime, :rows, :cols, :turns, :viewradius2, :attackradius2, :spawnradius2, :seed
   # Radii, unsquared. Floats.
   attr_accessor :viewradius, :attackradius, :spawnradius
-  
+  attr_reader :food_squares
   # Number of players. Available only after game's over.
   attr_accessor :players
   # Array of scores of players (you are player 0). Available only after game's over.
@@ -70,7 +70,7 @@ class AI
       @stdout.flush
     end
   end
-
+  
   # Internal; reads zero-turn input (game settings).
   def read_intro
     rd=@stdin.gets.strip
@@ -90,7 +90,7 @@ class AI
       when 'spawnradius2'; @spawnradius2=value.to_i
       when 'seed'; @seed=value.to_i
       else
-        warn "unexpected: #{rd}"
+        warn "unexpected2: #{rd}"
       end
     end
     
@@ -129,7 +129,7 @@ class AI
         square.hill=false
       end
     end
-    
+    @food_squares=[]
     @my_ants=[]
     @enemy_ants=[]
     
@@ -143,6 +143,7 @@ class AI
         @map[row][col].water=true
       when 'f'
         @map[row][col].food=true
+        @food_squares.push @map[row][col]
       when 'h'
         @map[row][col].hill=owner
       when 'a'
@@ -160,7 +161,7 @@ class AI
       when 'r'
         # pass
       else
-        warn "unexpected: #{rd}"
+        warn "unexpected3: #{rd}"
       end
     end
 

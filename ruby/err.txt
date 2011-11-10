@@ -1,0 +1,1012 @@
+unexpected2: player_seed 42
+directions : NE
+Move direction [32, 6], N
+directions : NE
+Move direction [31, 6], N
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : NE
+directions : SW
+Move direction [29, 6], S
+directions : NE
+Move direction [30, 6], N
+./ai.rb:116:in `read_turn': private method `split' called for nil:NilClass (NoMethodError)
+	from ./ai.rb:66:in `run'
+	from ./MyBot.rb:13
+	from MyBot.rb:3:in `require'
+	from MyBot.rb:3
+	from MyBot.rb:3:in `each'
+	from MyBot.rb:3
