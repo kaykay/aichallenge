@@ -1,16 +1,22 @@
 # Represent a single field of the map.
 class Square
+  Directions = [:N, :E, :W, :S]
   # Ant which sits on this square, or nil. The ant may be dead.
   attr_accessor :ant
   # Which row this square belongs to.
   attr_accessor :row
   # Which column this square belongs to.
   attr_accessor :col
+
+  #Maintain heuristic for various food locations to use in A* search,
+  #this would have dest/food square as key and no.of steps as value
+  attr_accessor :food_steps
   
   attr_accessor :water, :food, :hill, :ai
   
   def initialize water, food, hill, ant, row, col, ai
     @water, @food, @hill, @ant, @row, @col, @ai = water, food, hill, ant, row, col, ai
+    @food_steps = {}
   end
   
   # Returns true if this square is not water. Square is passable if it's not water, it doesn't contain alive ants and it doesn't contain food.
@@ -43,7 +49,7 @@ class Square
     
     return @ai.map[row][col]
   end
-
+  
   # Normalized row and col
   def nrow
     @nrow ||= row % @ai.rows
@@ -96,5 +102,43 @@ class Square
     end
     d
   end
+  
+  def update_adjacent_scores(fs)
+    food_steps_inc = @food_steps[fs] + 1
+    need_update = []
+    Directions.each do |dir|
+      adj_sq = neighbor(dir)
+      break if (!adj_sq || adj_sq.water? || adj_sq.food_steps.keys.include?(fs))
+      #warn "Updating score for #{adj_sq.row}, #{adj_sq.col} : #{food_steps_inc}"
+      adj_sq.food_steps[fs] = food_steps_inc
+      need_update << adj_sq
+    end
+    need_update
+  end
 
+  def sort_adj_square_directions
+    dists = []
+    Directions.each do |dir|
+      adj_sq = neighbor(dir)
+      break if !adj_sq
+      adj_sq.food_steps.each do |food_sq, num_steps|
+        # warn "#{num_steps}, #{food_sq}, #{dir}"
+        dists << [num_steps, food_sq, dir]
+      end
+    end
+    
+    dists.sort! do |a, b|
+      a[0] <=> b[0]
+    end
+    dists
+  end
+  
+  def opposite(dir)
+    case(dir)
+    when :N then :S
+    when :S then :N
+    when :E then :W
+    when :W then :E
+    end
+  end
 end

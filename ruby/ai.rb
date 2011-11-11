@@ -113,7 +113,7 @@ class AI
       
       rd=@stdin.gets.strip
       _, score = *rd.match(/\Ascore (\d+(?: \d+)+)\Z/)
-      @score = score.split(' ').map{|s| s.to_i}
+      @score = score ? score.split(' ').map{|s| s.to_i} : -1
       
       ret=true
     else

@@ -14,5 +14,5 @@ ai.run do |ai|
 
   # your turn code here
   walk = Walk.new(ai)
-  walk.food_walk
+  walk.astar_walk
 end

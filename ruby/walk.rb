@@ -44,6 +44,36 @@ class Walk
     end
   end
 
+  #This method updates heuristics for all the food squares in the map.
+  def update_food_heuristics
+    @ai.food_squares.each do |fs|
+      fs.food_steps[fs] = 0
+      need_update = fs.update_adjacent_scores(fs)
+      while(nx = need_update.shift )
+        need_update.concat nx.update_adjacent_scores(fs)
+      end
+    end
+  end
+
+  def astar_walk
+    update_food_heuristics
+    @ai.my_ants.each do |ant|
+      did_move = false
+      ant.square.sort_adj_square_directions.each do |num_steps, food_square, dir|
+        if(!targets[food_square] && move_direction(ant.square, dir))
+          targets[food_square] = ant.square
+          did_move = true
+          break
+        end  
+      end
+      if(!did_move)
+        random_directions.each do |dir|
+          break if move_direction(ant.square, dir)  
+        end
+      end
+    end
+  end
+  
   def food_walk
     ant_dist = []
     @ai.food_squares.each do |fs|
