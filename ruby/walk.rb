@@ -1,3 +1,5 @@
+require 'rubygems'
+require 'builder'
 class Walk
   attr_reader :orders, :ai, :targets
 
@@ -57,6 +59,7 @@ class Walk
 
   def astar_walk
     update_food_heuristics
+    #generate_html_map
     @ai.my_ants.each do |ant|
       did_move = false
       ant.square.sort_adj_square_directions.each do |num_steps, food_square, dir|
@@ -73,6 +76,26 @@ class Walk
       end
     end
   end
+
+  def generate_html_map
+    b = Builder::XmlMarkup.new(:indent => 2 )
+    html = b.html {
+      b.body {
+        b.table {
+          0.upto(@map.rows - 1).each do |row_num|
+            b.tr {
+              0.upto(@map.cols - 1).each do |col_num|
+                food = @ai.map[row]_num[col_num].food_steps
+                food.each do |fs, num_steps|
+                end
+              end
+            }
+          }
+        end
+      end
+    }
+  }
+end
   
   def food_walk
     ant_dist = []
