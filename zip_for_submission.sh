@@ -1,6 +1,6 @@
 #!/bin/bash
 zip_file="aichallenge.zip"
-if [ -b "$zip_file" ]
+if [ -f "$zip_file" ]
 then
     rm $zip_file
 fi

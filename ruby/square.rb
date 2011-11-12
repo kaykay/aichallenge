@@ -13,10 +13,13 @@ class Square
   attr_accessor :food_steps
   
   attr_accessor :water, :food, :hill, :ai
+
+  attr_accessor :visible
   
   def initialize water, food, hill, ant, row, col, ai
     @water, @food, @hill, @ant, @row, @col, @ai = water, food, hill, ant, row, col, ai
     @food_steps = {}
+    @visible = false
   end
   
   # Returns true if this square is not water. Square is passable if it's not water, it doesn't contain alive ants and it doesn't contain food.
@@ -29,7 +32,8 @@ class Square
   def hill?; @hill; end
   # Returns true if this square has an alive ant.
   def ant?; @ant and @ant.alive?; end;
-  
+
+  def visible?; @visible; end
   # Returns a square neighboring this one in given direction.
   def neighbor direction
     direction=direction.to_s.upcase.to_sym # canonical: :N, :E, :S, :W
@@ -108,7 +112,7 @@ class Square
     need_update = []
     Directions.each do |dir|
       adj_sq = neighbor(dir)
-      break if (!adj_sq || adj_sq.water? || adj_sq.food_steps.keys.include?(fs))
+      break if (!adj_sq || !adj_sq.visible? || adj_sq.water? || adj_sq.food_steps.keys.include?(fs))
       #warn "Updating score for #{adj_sq.row}, #{adj_sq.col} : #{food_steps_inc}"
       adj_sq.food_steps[fs] = food_steps_inc
       need_update << adj_sq
@@ -116,19 +120,15 @@ class Square
     need_update
   end
 
-  def sort_adj_square_directions
+  def adj_square_directions
     dists = []
     Directions.each do |dir|
       adj_sq = neighbor(dir)
       break if !adj_sq
       adj_sq.food_steps.each do |food_sq, num_steps|
         # warn "#{num_steps}, #{food_sq}, #{dir}"
-        dists << [num_steps, food_sq, dir]
+        dists << [num_steps, self, food_sq, dir]
       end
-    end
-    
-    dists.sort! do |a, b|
-      a[0] <=> b[0]
     end
     dists
   end

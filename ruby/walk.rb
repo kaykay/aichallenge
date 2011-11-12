@@ -58,44 +58,80 @@ class Walk
   end
 
   def astar_walk
+    ants_moved = []
+    warn "Before update food heuristics"
     update_food_heuristics
-    #generate_html_map
+    warn "Finished update food heuristics"
+    
+    generate_html_map
+    warn "After html map"
+    all_moves = []
     @ai.my_ants.each do |ant|
-      did_move = false
-      ant.square.sort_adj_square_directions.each do |num_steps, food_square, dir|
-        if(!targets[food_square] && move_direction(ant.square, dir))
-          targets[food_square] = ant.square
-          did_move = true
-          break
-        end  
+      all_moves.concat ant.square.adj_square_directions
+    end
+    warn all_moves.size
+    all_moves.sort! do |a, b|
+      a[0] <=> b[0]
+    end
+
+    all_moves.each do |num_steps, ant_square, food_square, dir|
+      if(!targets[food_square] && move_direction(ant_square, dir))
+        targets[food_square] = ant_square
+        ants_moved << ant_square.ant
       end
-      if(!did_move)
-        random_directions.each do |dir|
-          break if move_direction(ant.square, dir)  
-        end
+    end
+
+    unmoved_ants = @ai.my_ants - ants_moved
+    #move randomly if you are not going after anything
+    unmoved_ants.each do |ant|
+      random_directions.each do |dir|
+        break if move_direction(ant.square, dir)  
       end
     end
   end
 
   def generate_html_map
+    $stderr.flush
+
     b = Builder::XmlMarkup.new(:indent => 2 )
     html = b.html {
+      b.head {
+        b.link("rel"=>"stylesheet", "href"=>"http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css")
+      }
       b.body {
-        b.table {
-          0.upto(@map.rows - 1).each do |row_num|
+        b.table("class"=>"zebra-striped bordered-table") {
+          0.upto(@ai.rows - 1).each do |row_num|
             b.tr {
-              0.upto(@map.cols - 1).each do |col_num|
-                food = @ai.map[row]_num[col_num].food_steps
-                food.each do |fs, num_steps|
-                end
-              end
+              0.upto(@ai.cols - 1).each do |col_num|
+                sq = @ai.map[row_num][col_num]
+                food = sq.food_steps
+                color = case
+                        when (sq.ant? && sq.ant.mine?) then "violet"
+                        when (sq.ant? && sq.ant.enemy?) then "red"
+                        when (sq.water?) then "lightblue"
+                        when (sq.food?) then "lightgreen"
+                        when (sq.visible?) then "brown"
+                        else "whiteSmoke"
+                        end
+                b.td({"style" => "background-color: #{color}"}){
+                  food.each do |fs, num_steps|
+                    b.br
+                    b.span "[#{fs.row}, #{fs.col}] : #{num_steps}"
+                  end
+                }
+              end   
             }
-          }
-        end
-      end
+          end
+        }
+      }
     }
-  }
-end
+    warn "html is " + html
+    $stderr.flush
+    File.open("#{@ai.turn_number}.html", "w") do |f|
+      f.write(html)
+    end
+    
+  end
   
   def food_walk
     ant_dist = []
@@ -104,7 +140,7 @@ end
         dist = ant.square.distance(fs)
         ant_dist << [dist, ant.square, fs]
       end
-      ant_dist.sort do |a, b|
+      ant_dist.sort! do |a, b|
         a[0] <=> b[0]
       end
       ant_dist.each do |dist, ant_loc, food_loc|

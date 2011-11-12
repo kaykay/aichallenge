@@ -127,6 +127,7 @@ class AI
         square.food=false
         square.ant=nil
         square.hill=false
+        square.visible = false
       end
     end
     @food_squares=[]
@@ -137,7 +138,7 @@ class AI
       _, type, row, col, owner = *rd.match(/(w|f|h|a|d) (\d+) (\d+)(?: (\d+)|)/)
       row, col = row.to_i, col.to_i
       owner = owner.to_i if owner
-      
+      @map[row][col].visible=true
       case type
       when 'w'
         @map[row][col].water=true
@@ -152,6 +153,7 @@ class AI
         
         if owner==0
           my_ants.push a
+          @map[row][col].update_radius_visibility
         else
           enemy_ants.push a
         end
