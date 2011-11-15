@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'builder'
 class Walk
   attr_reader :orders, :ai, :targets
 
@@ -59,17 +57,26 @@ class Walk
 
   def astar_walk
     ants_moved = []
-    warn "Before update food heuristics"
-    update_food_heuristics
-    warn "Finished update food heuristics"
-    
-    generate_html_map
-    warn "After html map"
     all_moves = []
+
+ #   warn "Before update visibility"
+    @ai.my_ants.each do |ant|
+#      warn "updating ant on square #{ant.row}, #{ant.col}"
+      ant.square.update_approx_visibility(@ai.viewradius)
+    end
+    
+  #  warn "Before update food heuristics"
+    update_food_heuristics
+  #  warn "Finished update food heuristics"
+    
+#    generate_html_map
+#    warn "After html map"
+    
     @ai.my_ants.each do |ant|
       all_moves.concat ant.square.adj_square_directions
     end
-    warn all_moves.size
+    
+ #   warn all_moves.size
     all_moves.sort! do |a, b|
       a[0] <=> b[0]
     end
@@ -130,7 +137,6 @@ class Walk
     File.open("#{@ai.turn_number}.html", "w") do |f|
       f.write(html)
     end
-    
   end
   
   def food_walk

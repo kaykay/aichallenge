@@ -89,14 +89,16 @@ class AI
       when 'attackradius2'; @attackradius2=value.to_i
       when 'spawnradius2'; @spawnradius2=value.to_i
       when 'seed'; @seed=value.to_i
+      when /player_seed/; @seed=value.to_i
       else
         warn "unexpected2: #{rd}"
       end
+
     end
-    
     @viewradius=Math.sqrt @viewradius2
     @attackradius=Math.sqrt @attackradius2
     @spawnradius=Math.sqrt @spawnradius2
+    
   end
   
   # Internal; reads turn input (map state).
@@ -128,6 +130,7 @@ class AI
         square.ant=nil
         square.hill=false
         square.visible = false
+        square.food_steps = {}
       end
     end
     @food_squares=[]
@@ -150,10 +153,8 @@ class AI
       when 'a'
         a=Ant.new true, owner, @map[row][col], self
         @map[row][col].ant = a
-        
         if owner==0
           my_ants.push a
-          @map[row][col].update_radius_visibility
         else
           enemy_ants.push a
         end

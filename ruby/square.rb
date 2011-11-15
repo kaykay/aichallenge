@@ -53,6 +53,15 @@ class Square
     
     return @ai.map[row][col]
   end
+
+  #Looks at http://aichallenge.org/specification.php Distance section
+  #for details on how to calculate visibility. It returns true if
+  #another_sq is within this squares visibility radius.
+  def in_radius?(another_sq, radius2)
+    dr = [(this.row - another_sq.row).abs,(@ai.rows - (another_sq.row - this.row).abs) ].min
+    dc = [(this.col - another_sq.col).abs,(@ai.cols - (another_sq.col - this.col).abs) ]
+    (dr**2 + dc**2) <= radius2
+  end
   
   # Normalized row and col
   def nrow
@@ -63,6 +72,22 @@ class Square
     @ncol ||= col % @ai.cols
   end
 
+  def wrap_row(r)
+    if r < 0
+      @ai.rows + r
+    else
+      r % @ai.rows
+    end
+  end
+
+  def wrap_col(c)
+    if c < 0
+      @ai.cols + c
+    else
+      c % @ai.cols
+    end
+  end
+  
   #naive distance
   def distance(dest_square)
     dcol = [(ncol - dest_square.ncol).abs, @ai.cols - (ncol - dest_square.ncol)].min
@@ -112,8 +137,7 @@ class Square
     need_update = []
     Directions.each do |dir|
       adj_sq = neighbor(dir)
-      break if (!adj_sq || !adj_sq.visible? || adj_sq.water? || adj_sq.food_steps.keys.include?(fs))
-      #warn "Updating score for #{adj_sq.row}, #{adj_sq.col} : #{food_steps_inc}"
+      next if(!adj_sq || !adj_sq.visible? || adj_sq.water? || adj_sq.food_steps.keys.include?(fs))
       adj_sq.food_steps[fs] = food_steps_inc
       need_update << adj_sq
     end
@@ -126,7 +150,6 @@ class Square
       adj_sq = neighbor(dir)
       break if !adj_sq
       adj_sq.food_steps.each do |food_sq, num_steps|
-        # warn "#{num_steps}, #{food_sq}, #{dir}"
         dists << [num_steps, self, food_sq, dir]
       end
     end
@@ -141,4 +164,18 @@ class Square
     when :W then :E
     end
   end
+  
+  #update @visible for all the visible squares that are approximately
+  #in view radius, doing this so that its cost effective.
+  def update_approx_visibility(viewradius)
+    vr = viewradius.ceil
+    ltr, ltc = (self.row - vr), (self.col - vr)
+    rtr, rtc = (self.row + vr ), (self.col + vr)
+    (ltr..rtr).each do |rw|
+      (ltc..rtc).each do |cl|
+        @ai.map[wrap_row(rw)][wrap_col(cl)].visible = true
+      end
+    end
+  end
+  
 end
