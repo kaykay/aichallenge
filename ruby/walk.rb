@@ -1,3 +1,4 @@
+require 'builder'
 class Walk
   attr_reader :orders, :ai, :targets
 
@@ -46,16 +47,23 @@ class Walk
 
   #This method updates heuristics for all the food squares in the map.
   def update_food_heuristics
-    @ai.food_squares.each do |fs|
+    warn "updating food heuristics..."
+    fs_need_update =   @ai.food_squares - @ai.known_food
+    #fs_need_deleted = @ai.known_food - @ai.food_squares
+    
+    fs_need_update.each do |fs|
       fs.food_steps[fs] = 0
       need_update = fs.update_adjacent_scores(fs)
       while(nx = need_update.shift )
         need_update.concat nx.update_adjacent_scores(fs)
       end
     end
+    @ai.known_food = @ai.food_squares
   end
 
+
   def astar_walk
+    warn "in astar walk"
     ants_moved = []
     all_moves = []
 
@@ -64,6 +72,8 @@ class Walk
 #      warn "updating ant on square #{ant.row}, #{ant.col}"
       ant.square.update_approx_visibility(@ai.viewradius)
     end
+
+    warn "after updating ants"
     
   #  warn "Before update food heuristics"
     update_food_heuristics

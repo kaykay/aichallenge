@@ -14,6 +14,8 @@ class AI
   # Array of scores of players (you are player 0). Available only after game's over.
   attr_accessor :score
 
+  attr_accessor :known_food
+  
   # Initialize a new AI object. Arguments are streams this AI will read from and write to.
   def initialize stdin=$stdin, stdout=$stdout
     @stdin, @stdout = stdin, stdout
@@ -25,6 +27,9 @@ class AI
     @enemy_ants=[]
     
     @did_setup=false
+
+    @known_food = []
+    @food_squares = []
   end
   
   # Returns a read-only hash of all settings.
@@ -130,7 +135,7 @@ class AI
         square.ant=nil
         square.hill=false
         square.visible = false
-        square.food_steps = {}
+        #        square.food_steps = {}
       end
     end
     @food_squares=[]
@@ -167,7 +172,7 @@ class AI
         warn "unexpected3: #{rd}"
       end
     end
-
+    
     return ret
   end
   

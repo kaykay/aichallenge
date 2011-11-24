@@ -134,6 +134,7 @@ class Square
   
   def update_adjacent_scores(fs)
     food_steps_inc = @food_steps[fs] + 1
+    return [] if food_steps_inc > 2 * @ai.viewradius
     need_update = []
     Directions.each do |dir|
       adj_sq = neighbor(dir)
@@ -169,13 +170,15 @@ class Square
   #in view radius, doing this so that its cost effective.
   def update_approx_visibility(viewradius)
     vr = viewradius.ceil
+    disappeared_food = @ai.known_food - @ai.food_squares
     ltr, ltc = (self.row - vr), (self.col - vr)
     rtr, rtc = (self.row + vr ), (self.col + vr)
     (ltr..rtr).each do |rw|
       (ltc..rtc).each do |cl|
+        disappeared_food.each {|ds| @ai.map[wrap_row(rw)][wrap_col(cl)].food_steps.delete(ds)}
+          
         @ai.map[wrap_row(rw)][wrap_col(cl)].visible = true
       end
     end
   end
-  
 end
